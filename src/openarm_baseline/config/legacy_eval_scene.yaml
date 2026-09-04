@@ -1,0 +1,43 @@
+# Legacy evaluator reference: scripts/eval/openarm_smolvla_env.py.
+# StorageBox and the randomized 3-cube configuration are intentionally omitted.
+table:
+  visual_mesh: package://openarm_description/meshes/table/table_visual.obj
+  visual_aabb_min: [-0.801513, -0.502272, -0.754904]
+  visual_aabb_max: [0.801420, 0.504784, 0.004465]
+  collision_center: [0.0, 0.0, -0.0211]
+  collision_size: [1.6, 1.0, 0.04]
+robot:
+  root_xyz: [-0.17858, 0.24336, -0.00468]
+  root_quaternion_wxyz: [1.0, 0.0, 0.0, 0.0]
+  initial_left_joints_deg: [20.0, 0.0, 0.0, 60.0, 0.0, 0.0, -44.0]
+  initial_right_joints_deg: [-20.0, 0.0, 0.0, 60.0, 0.0, 0.0, 44.0]
+# Tomato scene semantics: a body-mounted head camera, not the legacy
+# evaluator's world-fixed external camera.  Its +X axis is aimed at the
+# body-front task cube; the standard optical child maps optical +Z to link +X.
+head_camera:
+  parent_frame: openarm_body_link0
+  # Preserve the 17 mm clearance above the body top after its 193 mm shortening.
+  xyz: [0.04, 0.0, 0.597]
+  # Recomputed pitch: head optical +Z (mapped to link +X) still intersects
+  # the unchanged body-front task-cube center after the camera was lowered.
+  quaternion_xyzw: [0.0, 0.5087081018600654, 0.0, 0.8609390612011568]
+# Reference only; never published by the tomato RViz launcher.
+legacy_external_top_camera_reference:
+  xyz: [-0.38725, 0.09957, 0.78544]
+  quaternion_xyzw: [0.0, 0.70710678, 0.0, 0.70710678]
+wrist_camera:
+  parent: openarm_left_hand_tcp
+  xyz: [0.06336, -0.01314, -0.05143]
+  quaternion_wxyz: [0.0, 0.5, 0.0, 0.86603]
+optical_frame_rpy: [-1.5707963267948966, 0.0, -1.5707963267948966]
+cube:
+  frame: task_cube
+  parent_frame: world
+  # Body-front design coordinate.  +X is the OpenArm front axis; the script
+  # computes the world pose from the unchanged robot root pose.
+  body_relative_xyz: [0.35, 0.0, 0.034145]
+  quaternion_wxyz: [1.0, 0.0, 0.0, 0.0]
+  size: 0.05
+  color_rgba: [0.85, 0.05, 0.03, 1.0]
+  # z = visual tabletop 0.004465 + cube half-height 0.025, expressed in the
+  # body frame using the unchanged root z=-0.00468.

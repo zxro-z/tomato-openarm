@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="openarm">
+  <group name="left_arm">
+    <chain base_link="openarm_body_link0" tip_link="openarm_left_hand_tcp"/>
+  </group>
+  <group name="right_arm">
+    <chain base_link="openarm_body_link0" tip_link="right_tesollo_tcp"/>
+  </group>
+  <group name="tesollo_gripper">
+    <joint name="rj_dg_1_1"/>
+    <joint name="rj_dg_1_2"/>
+    <joint name="rj_dg_1_3"/>
+    <joint name="rj_dg_1_4"/>
+    <joint name="rj_dg_2_1"/>
+    <joint name="rj_dg_2_2"/>
+    <joint name="rj_dg_2_3"/>
+    <joint name="rj_dg_2_4"/>
+    <joint name="rj_dg_3_1"/>
+    <joint name="rj_dg_3_2"/>
+    <joint name="rj_dg_3_3"/>
+    <joint name="rj_dg_3_4"/>
+    <joint name="rj_dg_4_1"/>
+    <joint name="rj_dg_4_2"/>
+    <joint name="rj_dg_4_3"/>
+    <joint name="rj_dg_4_4"/>
+    <joint name="rj_dg_5_1"/>
+    <joint name="rj_dg_5_2"/>
+    <joint name="rj_dg_5_3"/>
+    <joint name="rj_dg_5_4"/>
+  </group>
+  <group name="right_arm_with_gripper">
+    <group name="right_arm"/>
+    <group name="tesollo_gripper"/>
+  </group>
+  <group name="bimanual_arms">
+    <group name="left_arm"/>
+    <group name="right_arm"/>
+  </group>
+
+  <group_state name="left_home" group="left_arm">
+    <joint name="openarm_left_joint1" value="0.349065850399"/>
+    <joint name="openarm_left_joint2" value="0.0"/>
+    <joint name="openarm_left_joint3" value="0.0"/>
+    <joint name="openarm_left_joint4" value="1.047197551197"/>
+    <joint name="openarm_left_joint5" value="0.0"/>
+    <joint name="openarm_left_joint6" value="0.0"/>
+    <joint name="openarm_left_joint7" value="-0.767944870878"/>
+  </group_state>
+  <group_state name="right_home" group="right_arm">
+    <joint name="openarm_right_joint1" value="-0.349065850399"/>
+    <joint name="openarm_right_joint2" value="0.698131700798"/>
+    <joint name="openarm_right_joint3" value="-0.174532925199"/>
+    <joint name="openarm_right_joint4" value="1.047197551197"/>
+    <joint name="openarm_right_joint5" value="0.523598775598"/>
+    <joint name="openarm_right_joint6" value="0.261799387799"/>
+    <joint name="openarm_right_joint7" value="0.767944870878"/>
+  </group_state>
+  <group_state name="bimanual_home" group="bimanual_arms">
+    <joint name="openarm_left_joint1" value="0.349065850399"/>
+    <joint name="openarm_left_joint2" value="0.0"/>
+    <joint name="openarm_left_joint3" value="0.0"/>
+    <joint name="openarm_left_joint4" value="1.047197551197"/>
+    <joint name="openarm_left_joint5" value="0.0"/>
+    <joint name="openarm_left_joint6" value="0.0"/>
+    <joint name="openarm_left_joint7" value="-0.767944870878"/>
+    <joint name="openarm_right_joint1" value="-0.349065850399"/>
+    <joint name="openarm_right_joint2" value="0.698131700798"/>
+    <joint name="openarm_right_joint3" value="-0.174532925199"/>
+    <joint name="openarm_right_joint4" value="1.047197551197"/>
+    <joint name="openarm_right_joint5" value="0.523598775598"/>
+    <joint name="openarm_right_joint6" value="0.261799387799"/>
+    <joint name="openarm_right_joint7" value="0.767944870878"/>
+  </group_state>
+
+  <end_effector name="tesollo" parent_link="rl_dg_palm_extra" group="tesollo_gripper" parent_group="right_arm"/>
+  <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="openarm_body_link0"/>
+
+  <disable_collisions link1="openarm_body_link0" link2="openarm_left_link0" reason="Adjacent"/>
+  <disable_collisions link1="openarm_body_link0" link2="openarm_right_link0" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link0" link2="openarm_left_link1" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link1" link2="openarm_left_link2" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link2" link2="openarm_left_link3" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link3" link2="openarm_left_link4" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link4" link2="openarm_left_link5" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link5" link2="openarm_left_link6" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link6" link2="openarm_left_link7" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_link7" link2="openarm_left_hand" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_hand" link2="openarm_left_left_finger" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_hand" link2="openarm_left_right_finger" reason="Adjacent"/>
+  <disable_collisions link1="openarm_left_hand" link2="openarm_left_hand_tcp" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link0" link2="openarm_right_link1" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link1" link2="openarm_right_link2" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link2" link2="openarm_right_link3" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link3" link2="openarm_right_link4" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link4" link2="openarm_right_link5" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link5" link2="openarm_right_link6" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link6" link2="openarm_right_link7" reason="Adjacent"/>
+  <disable_collisions link1="openarm_right_link7" link2="rl_dg_mount" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_mount" link2="rl_dg_base" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_base" link2="rl_dg_palm" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm" link2="rl_dg_palm_extra" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm_extra" link2="right_tesollo_tcp" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm" link2="tesollo_right_rl_dg_1_1" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_1_1" link2="tesollo_right_rl_dg_1_2" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_1_2" link2="tesollo_right_rl_dg_1_3" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_1_3" link2="tesollo_right_rl_dg_1_4" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_1_4" link2="tesollo_right_rl_dg_1_tip" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm" link2="tesollo_right_rl_dg_2_1" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_2_1" link2="tesollo_right_rl_dg_2_2" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_2_2" link2="tesollo_right_rl_dg_2_3" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_2_3" link2="tesollo_right_rl_dg_2_4" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_2_4" link2="tesollo_right_rl_dg_2_tip" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm" link2="tesollo_right_rl_dg_3_1" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_3_1" link2="tesollo_right_rl_dg_3_2" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_3_2" link2="tesollo_right_rl_dg_3_3" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_3_3" link2="tesollo_right_rl_dg_3_4" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_3_4" link2="tesollo_right_rl_dg_3_tip" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm" link2="tesollo_right_rl_dg_4_1" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_4_1" link2="tesollo_right_rl_dg_4_2" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_4_2" link2="tesollo_right_rl_dg_4_3" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_4_3" link2="tesollo_right_rl_dg_4_4" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_4_4" link2="tesollo_right_rl_dg_4_tip" reason="Adjacent"/>
+  <disable_collisions link1="rl_dg_palm" link2="tesollo_right_rl_dg_5_1" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_5_1" link2="tesollo_right_rl_dg_5_2" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_5_2" link2="tesollo_right_rl_dg_5_3" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_5_3" link2="tesollo_right_rl_dg_5_4" reason="Adjacent"/>
+  <disable_collisions link1="tesollo_right_rl_dg_5_4" link2="tesollo_right_rl_dg_5_tip" reason="Adjacent"/>
+</robot>

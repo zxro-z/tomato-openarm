@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: openarm_description
+    relative_path: urdf/openarm_eval_bimanual_right_tesollo.urdf.xacro
+  srdf:
+    relative_path: config/openarm.srdf
+  package_settings:
+    author_name: zxro
+    author_email: zxro@todo.todo
+    generated_timestamp: 1785483352

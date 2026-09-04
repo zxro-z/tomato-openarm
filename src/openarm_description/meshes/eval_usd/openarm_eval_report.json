@@ -1,0 +1,4047 @@
+{
+  "source_usd": "/home/zxro/arena/lerobot/src/lerobot/assets/openarm_use/openarm_half_tesollo_tactile.usd",
+  "xacro_path": "/home/zxro/tomato/src/openarm_description/urdf/openarm_eval_bimanual_right_tesollo.urdf.xacro",
+  "hierarchy": {
+    "default_prim": "/openarm",
+    "meters_per_unit": 1.0,
+    "up_axis": "Z",
+    "robot_root_prim": "/openarm/openarm_body_link0",
+    "tesollo_mount_prim": "/openarm/tesollo_right/rl_dg_mount"
+  },
+  "usd_joint_count": 50,
+  "current_joint_count": 72,
+  "joint_comparison": [
+    {
+      "joint": "AssemblerFixedJoint",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link7",
+          "eval": "openarm_right_link7",
+          "match": true
+        },
+        "child": {
+          "current": "rl_dg_mount",
+          "eval": "rl_dg_mount",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            2e-07,
+            0.0565764
+          ],
+          "eval": [
+            -0.0,
+            2.02e-07,
+            0.05657639
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            -1.5707964
+          ],
+          "eval": [
+            -0.0,
+            0.0,
+            -1.570796461
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "TS_F_A_left_base_link_tip_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_base_link_tip_joint",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_base_link",
+        "child": "TS_F_A_left_tip_link",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          -0.069,
+          -0.001
+        ],
+        "origin_rpy": [
+          1.57,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_1",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_1",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_1",
+        "axis": null,
+        "origin_xyz": [
+          -1e-05,
+          0.0,
+          0.02
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_2",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_2",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_2",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.0192
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_3",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_3",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_3",
+        "axis": null,
+        "origin_xyz": [
+          0.00547,
+          0.0,
+          0.02
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_4",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_4",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_4",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.02465
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_5",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_5",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_5",
+        "axis": null,
+        "origin_xyz": [
+          -0.0001,
+          0.0,
+          0.0285
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_6",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_6",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_6",
+        "axis": null,
+        "origin_xyz": [
+          0.00551,
+          0.0,
+          0.0285
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_pad_pad_joint_7",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_pad_pad_joint_7",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_pad",
+        "child": "TS_F_A_left_pad_7",
+        "axis": null,
+        "origin_xyz": [
+          -1e-05,
+          0.0,
+          0.01361
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_root_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_root_joint",
+        "joint_type": "fixed",
+        "parent": "openarm_left_left_finger",
+        "child": "TS_F_A_left_base_link",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.002147,
+          0.0661995
+        ],
+        "origin_rpy": [
+          1.5708,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_left_tip_link_pad_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_left_tip_link_pad_joint",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_left_tip_link",
+        "child": "TS_F_A_left_pad",
+        "axis": null,
+        "origin_xyz": [
+          -0.0055,
+          0.0001,
+          -0.0942
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_base_link_tip_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_base_link_tip_joint",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_base_link",
+        "child": "TS_F_A_right_tip_link",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          -0.069,
+          -0.001
+        ],
+        "origin_rpy": [
+          1.57,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_1",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_1",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_1",
+        "axis": null,
+        "origin_xyz": [
+          -1e-05,
+          0.0,
+          0.02
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_2",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_2",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_2",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.0192
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_3",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_3",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_3",
+        "axis": null,
+        "origin_xyz": [
+          0.00547,
+          0.0,
+          0.02
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_4",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_4",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_4",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.02465
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_5",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_5",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_5",
+        "axis": null,
+        "origin_xyz": [
+          -0.0001,
+          0.0,
+          0.0285
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_6",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_6",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_6",
+        "axis": null,
+        "origin_xyz": [
+          0.00551,
+          0.0,
+          0.0285
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_pad_pad_joint_7",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_pad_pad_joint_7",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_pad",
+        "child": "TS_F_A_right_pad_7",
+        "axis": null,
+        "origin_xyz": [
+          -1e-05,
+          0.0,
+          0.01361
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_root_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_root_joint",
+        "joint_type": "fixed",
+        "parent": "openarm_left_right_finger",
+        "child": "TS_F_A_right_base_link",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0020218,
+          -0.0661995
+        ],
+        "origin_rpy": [
+          -1.5707964,
+          0.0,
+          3.1415927
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "TS_F_A_right_tip_link_pad_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "TS_F_A_right_tip_link_pad_joint",
+        "joint_type": "fixed",
+        "parent": "TS_F_A_right_tip_link",
+        "child": "TS_F_A_right_pad",
+        "axis": null,
+        "origin_xyz": [
+          -0.0055,
+          0.0001,
+          -0.0942
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "left_openarm_hand_joint",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link7",
+          "eval": "openarm_left_link7",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_hand",
+          "eval": "openarm_left_hand",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            -0.1001
+          ],
+          "eval": [
+            0.0,
+            -0.0,
+            0.100100003
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            3.1415927,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "openarm_body_world_joint",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "world",
+          "eval": "world",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_body_link0",
+          "eval": "openarm_body_link0",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.17858,
+            0.24336,
+            -0.00468
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_finger_joint1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "prismatic",
+          "eval": "prismatic",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_hand",
+          "eval": "openarm_left_hand",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_right_finger",
+          "eval": "openarm_left_right_finger",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.006,
+            0.015
+          ],
+          "eval": [
+            0.0,
+            -0.006,
+            0.015
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            3.1415927,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            3.141592654,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": 0.0,
+          "eval": 0.0,
+          "match": true
+        },
+        "upper": {
+          "current": 0.044,
+          "eval": 0.044,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_finger_joint2",
+      "status": "PASS",
+      "fields": {
+        "joint_type": {
+          "current": "prismatic",
+          "eval": "prismatic",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_hand",
+          "eval": "openarm_left_hand",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_left_finger",
+          "eval": "openarm_left_left_finger",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.006,
+            0.015
+          ],
+          "eval": [
+            0.0,
+            0.006,
+            0.015
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.0088,
+          "eval": -0.0088,
+          "match": true
+        },
+        "upper": {
+          "current": 0.0528,
+          "eval": 0.0528,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_hand_tcp_joint",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_hand",
+          "eval": "openarm_left_hand",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_hand_tcp",
+          "eval": "openarm_left_hand_tcp",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.0,
+            0.08
+          ],
+          "eval": [
+            0.0,
+            -0.0,
+            0.079999998
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link0",
+          "eval": "openarm_left_link0",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link1",
+          "eval": "openarm_left_link1",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.0,
+            0.0625
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0625
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            1e-07,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": -3.4906588,
+          "eval": -3.49065877,
+          "match": false
+        },
+        "upper": {
+          "current": 1.3962629,
+          "eval": 1.396262869,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link1",
+          "eval": "openarm_left_link1",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link2",
+          "eval": "openarm_left_link2",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0301,
+            0.0,
+            0.06
+          ],
+          "eval": [
+            -0.030099999,
+            0.0,
+            0.059999999
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            1.5707964,
+            0.0,
+            3.1415927
+          ],
+          "eval": [
+            1.570796461,
+            0.0,
+            3.141592654
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": -3.3161253,
+          "eval": -3.316125312,
+          "match": false
+        },
+        "upper": {
+          "current": 0.1745327,
+          "eval": 0.174532659,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link2",
+          "eval": "openarm_left_link2",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link3",
+          "eval": "openarm_left_link3",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0301,
+            0.0,
+            0.06625
+          ],
+          "eval": [
+            0.030099999,
+            0.0,
+            0.066249996
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707959,
+          "eval": -1.570795927,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707959,
+          "eval": 1.570795927,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link3",
+          "eval": "openarm_left_link3",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link4",
+          "eval": "openarm_left_link4",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0315,
+            0.15375
+          ],
+          "eval": [
+            -0.0,
+            0.031500001,
+            0.153750002
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": 0.0,
+          "eval": 0.0,
+          "match": true
+        },
+        "upper": {
+          "current": 2.4434607,
+          "eval": 2.443460686,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint5",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link4",
+          "eval": "openarm_left_link4",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link5",
+          "eval": "openarm_left_link5",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.0315,
+            0.0955
+          ],
+          "eval": [
+            0.0,
+            -0.031500001,
+            0.0955
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707959,
+          "eval": -1.570795927,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707959,
+          "eval": 1.570795927,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint6",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link5",
+          "eval": "openarm_left_link5",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link6",
+          "eval": "openarm_left_link6",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0375,
+            0.0,
+            0.1205
+          ],
+          "eval": [
+            0.037500001,
+            0.0,
+            0.120499998
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.785398,
+          "eval": -0.785397964,
+          "match": false
+        },
+        "upper": {
+          "current": 0.785398,
+          "eval": 0.785397964,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_joint7",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_left_link6",
+          "eval": "openarm_left_link6",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link7",
+          "eval": "openarm_left_link7",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0375,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            -0.037500001,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            3.1415927,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            3.141592654,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": -1.5707959,
+          "eval": -1.570795927,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707959,
+          "eval": 1.570795927,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_left_openarm_body_link0_joint",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_body_link0",
+          "eval": "openarm_body_link0",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_left_link0",
+          "eval": "openarm_left_link0",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.031,
+            0.605
+          ],
+          "eval": [
+            0.0,
+            0.030999999,
+            0.504999995
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            -1.5708,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            -1.570800001,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link0",
+          "eval": "openarm_right_link0",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link1",
+          "eval": "openarm_right_link1",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0625
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0625
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            -1e-07,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": -1.3962629,
+          "eval": -1.396262869,
+          "match": false
+        },
+        "upper": {
+          "current": 3.4906588,
+          "eval": 3.49065877,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link1",
+          "eval": "openarm_right_link1",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link2",
+          "eval": "openarm_right_link2",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0301,
+            -0.0,
+            0.06
+          ],
+          "eval": [
+            -0.030099999,
+            0.0,
+            0.059999999
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            -1.5707964,
+            0.0,
+            -3.1415927
+          ],
+          "eval": [
+            -1.570796461,
+            -0.0,
+            3.141592654
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": -0.1745327,
+          "eval": -0.174532659,
+          "match": false
+        },
+        "upper": {
+          "current": 3.3161253,
+          "eval": 3.316125312,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link2",
+          "eval": "openarm_right_link2",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link3",
+          "eval": "openarm_right_link3",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0301,
+            0.0,
+            0.06625
+          ],
+          "eval": [
+            0.030099999,
+            0.0,
+            0.066249996
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707959,
+          "eval": -1.570795927,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707959,
+          "eval": 1.570795927,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link3",
+          "eval": "openarm_right_link3",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link4",
+          "eval": "openarm_right_link4",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0315,
+            0.15375
+          ],
+          "eval": [
+            -0.0,
+            0.031500001,
+            0.153750002
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": 0.0,
+          "eval": 0.0,
+          "match": true
+        },
+        "upper": {
+          "current": 2.4434607,
+          "eval": 2.443460686,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint5",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link4",
+          "eval": "openarm_right_link4",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link5",
+          "eval": "openarm_right_link5",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.0315,
+            0.0955
+          ],
+          "eval": [
+            0.0,
+            -0.031500001,
+            0.0955
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707959,
+          "eval": -1.570795927,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707959,
+          "eval": 1.570795927,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint6",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link5",
+          "eval": "openarm_right_link5",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link6",
+          "eval": "openarm_right_link6",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0375,
+            -0.0,
+            0.1205
+          ],
+          "eval": [
+            0.037500001,
+            0.0,
+            0.120499998
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.785398,
+          "eval": -0.785397964,
+          "match": false
+        },
+        "upper": {
+          "current": 0.785398,
+          "eval": 0.785397964,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_joint7",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_right_link6",
+          "eval": "openarm_right_link6",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link7",
+          "eval": "openarm_right_link7",
+          "match": true
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0375,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            -0.037500001,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707959,
+          "eval": -1.570795927,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707959,
+          "eval": 1.570795927,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "openarm_right_openarm_body_link0_joint",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "openarm_body_link0",
+          "eval": "openarm_body_link0",
+          "match": true
+        },
+        "child": {
+          "current": "openarm_right_link0",
+          "eval": "openarm_right_link0",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.031,
+            0.605
+          ],
+          "eval": [
+            0.0,
+            -0.030999999,
+            0.504999995
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            1.5708,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.570800001,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "right_tesollo_tcp_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "right_tesollo_tcp_joint",
+        "joint_type": "fixed",
+        "parent": "rl_dg_palm_extra",
+        "child": "right_tesollo_tcp",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    },
+    {
+      "joint": "rj_dg_1_1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_1_1",
+          "eval": "rl_dg_1_1",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0162,
+            0.019,
+            0.0128
+          ],
+          "eval": [
+            -0.0162,
+            0.018999999,
+            0.0128
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.3839724,
+          "eval": -0.383972402,
+          "match": false
+        },
+        "upper": {
+          "current": 0.8901179,
+          "eval": 0.890117919,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_1_2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_1_1",
+          "eval": "rl_dg_1_1",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_1_2",
+          "eval": "rl_dg_1_2",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.04195,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.041949999,
+            0.0,
+            0.0
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -3.1415927,
+          "eval": -3.141592654,
+          "match": false
+        },
+        "upper": {
+          "current": 0.0,
+          "eval": 0.0,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_1_3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_1_2",
+          "eval": "rl_dg_1_2",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_1_3",
+          "eval": "rl_dg_1_3",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.031,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.030999999,
+            0.0
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_1_4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_1_3",
+          "eval": "rl_dg_1_3",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_1_4",
+          "eval": "rl_dg_1_4",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0388,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.038800001,
+            0.0
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_1_tip",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_1_4",
+          "eval": "rl_dg_1_4",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_1_tip",
+          "eval": "rl_dg_1_tip",
+          "match": false
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0363,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0363,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_2_1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_2_1",
+          "eval": "rl_dg_2_1",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0071,
+            0.027,
+            0.0661
+          ],
+          "eval": [
+            -0.0071,
+            0.027000001,
+            0.066100001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.418879,
+          "eval": -0.41887902,
+          "match": false
+        },
+        "upper": {
+          "current": 0.6108652,
+          "eval": 0.610865172,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_2_2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_2_1",
+          "eval": "rl_dg_2_1",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_2_2",
+          "eval": "rl_dg_2_2",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.01765,
+            0.0,
+            0.0265
+          ],
+          "eval": [
+            0.017650001,
+            0.0,
+            0.0265
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": 0.0,
+          "eval": -0.0,
+          "match": true
+        },
+        "upper": {
+          "current": 2.0071286,
+          "eval": 2.00712864,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_2_3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_2_2",
+          "eval": "rl_dg_2_2",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_2_3",
+          "eval": "rl_dg_2_3",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_2_4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_2_3",
+          "eval": "rl_dg_2_3",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_2_4",
+          "eval": "rl_dg_2_4",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_2_tip",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_2_4",
+          "eval": "rl_dg_2_4",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_2_tip",
+          "eval": "rl_dg_2_tip",
+          "match": false
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0255
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0255
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_3_1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_3_1",
+          "eval": "rl_dg_3_1",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0071,
+            0.0025,
+            0.0701
+          ],
+          "eval": [
+            -0.0071,
+            0.0025,
+            0.070100002
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.6108652,
+          "eval": -0.610865172,
+          "match": false
+        },
+        "upper": {
+          "current": 0.6108652,
+          "eval": 0.610865172,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_3_2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_3_1",
+          "eval": "rl_dg_3_1",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_3_2",
+          "eval": "rl_dg_3_2",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.01765,
+            0.0,
+            0.0265
+          ],
+          "eval": [
+            0.017650001,
+            0.0,
+            0.0265
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": 0.0,
+          "eval": 0.0,
+          "match": true
+        },
+        "upper": {
+          "current": 1.9547686,
+          "eval": 1.954768629,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_3_3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_3_2",
+          "eval": "rl_dg_3_2",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_3_3",
+          "eval": "rl_dg_3_3",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_3_4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_3_3",
+          "eval": "rl_dg_3_3",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_3_4",
+          "eval": "rl_dg_3_4",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_3_tip",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_3_4",
+          "eval": "rl_dg_3_4",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_3_tip",
+          "eval": "rl_dg_3_tip",
+          "match": false
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0255
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0255
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_4_1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_4_1",
+          "eval": "rl_dg_4_1",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0071,
+            -0.022,
+            0.0621
+          ],
+          "eval": [
+            -0.0071,
+            -0.022,
+            0.062100001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.6108652,
+          "eval": -0.610865172,
+          "match": false
+        },
+        "upper": {
+          "current": 0.418879,
+          "eval": 0.41887902,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_4_2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_4_1",
+          "eval": "rl_dg_4_1",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_4_2",
+          "eval": "rl_dg_4_2",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.01765,
+            0.0,
+            0.0265
+          ],
+          "eval": [
+            0.017650001,
+            0.0,
+            0.0265
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": 0.0,
+          "eval": 0.0,
+          "match": true
+        },
+        "upper": {
+          "current": 1.9024088,
+          "eval": 1.902408752,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_4_3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_4_2",
+          "eval": "rl_dg_4_2",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_4_3",
+          "eval": "rl_dg_4_3",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_4_4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_4_3",
+          "eval": "rl_dg_4_3",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_4_4",
+          "eval": "rl_dg_4_4",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_4_tip",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_4_4",
+          "eval": "rl_dg_4_4",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_4_tip",
+          "eval": "rl_dg_4_tip",
+          "match": false
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0255
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0255
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_5_1",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_5_1",
+          "eval": "rl_dg_5_1",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0103,
+            -0.0195,
+            0.0182
+          ],
+          "eval": [
+            0.0103,
+            -0.0195,
+            0.018200001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.0174533,
+          "eval": -0.017453291,
+          "match": false
+        },
+        "upper": {
+          "current": 1.0471976,
+          "eval": 1.047197551,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_5_2",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_5_1",
+          "eval": "rl_dg_5_1",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_5_2",
+          "eval": "rl_dg_5_2",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            -0.028,
+            0.0381
+          ],
+          "eval": [
+            0.0,
+            -0.028000001,
+            0.0381
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -0.418879,
+          "eval": -0.41887902,
+          "match": false
+        },
+        "upper": {
+          "current": 0.6108652,
+          "eval": 0.610865172,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_5_3",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_5_2",
+          "eval": "rl_dg_5_2",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_5_3",
+          "eval": "rl_dg_5_3",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.031
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.030999999
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_5_4",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "revolute",
+          "eval": "revolute",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_5_3",
+          "eval": "rl_dg_5_3",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_5_4",
+          "eval": "rl_dg_5_4",
+          "match": false
+        },
+        "axis": {
+          "current": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0388
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.038800001
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": -1.5707963,
+          "eval": -1.570796327,
+          "match": false
+        },
+        "upper": {
+          "current": 1.5707963,
+          "eval": 1.570796327,
+          "match": false
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_5_tip",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "tesollo_right_rl_dg_5_4",
+          "eval": "rl_dg_5_4",
+          "match": false
+        },
+        "child": {
+          "current": "tesollo_right_rl_dg_5_tip",
+          "eval": "rl_dg_5_tip",
+          "match": false
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0363
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0363
+          ],
+          "match": true
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_base",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_mount",
+          "eval": "rl_dg_mount",
+          "match": true
+        },
+        "child": {
+          "current": "rl_dg_base",
+          "eval": "rl_dg_base",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            -0.0,
+            0.0,
+            0.0040031
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.004
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_palm",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_base",
+          "eval": "rl_dg_base",
+          "match": true
+        },
+        "child": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.0,
+            0.0,
+            0.0698
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.069799997
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "rj_dg_palm_extra",
+      "status": "FAIL",
+      "fields": {
+        "joint_type": {
+          "current": "fixed",
+          "eval": "fixed",
+          "match": true
+        },
+        "parent": {
+          "current": "rl_dg_palm",
+          "eval": "rl_dg_palm",
+          "match": true
+        },
+        "child": {
+          "current": "rl_dg_palm_extra",
+          "eval": "rl_dg_palm_extra",
+          "match": true
+        },
+        "axis": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "origin_xyz": {
+          "current": [
+            0.07,
+            0.0,
+            0.06
+          ],
+          "eval": [
+            0.07,
+            0.0,
+            0.059999999
+          ],
+          "match": false
+        },
+        "origin_rpy": {
+          "current": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "eval": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "match": true
+        },
+        "lower": {
+          "current": null,
+          "eval": null,
+          "match": true
+        },
+        "upper": {
+          "current": null,
+          "eval": null,
+          "match": true
+        }
+      }
+    },
+    {
+      "joint": "table_visual_joint",
+      "status": "MISSING",
+      "current": {
+        "name": "table_visual_joint",
+        "joint_type": "fixed",
+        "parent": "world",
+        "child": "table_visual_link",
+        "axis": null,
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lower": null,
+        "upper": null
+      },
+      "eval": null
+    }
+  ],
+  "visual_mesh_exports": {},
+  "unresolved_visual_prims": [
+    "/openarm/openarm_body_link0/visuals",
+    "/openarm/openarm_left_hand/visuals",
+    "/openarm/openarm_left_hand_tcp/visuals",
+    "/openarm/openarm_left_left_finger/visuals",
+    "/openarm/openarm_left_link0/visuals",
+    "/openarm/openarm_left_link1/visuals",
+    "/openarm/openarm_left_link2/visuals",
+    "/openarm/openarm_left_link3/visuals",
+    "/openarm/openarm_left_link4/visuals",
+    "/openarm/openarm_left_link5/visuals",
+    "/openarm/openarm_left_link6/visuals",
+    "/openarm/openarm_left_link7/visuals",
+    "/openarm/openarm_left_right_finger/visuals",
+    "/openarm/openarm_right_link0/visuals",
+    "/openarm/openarm_right_link1/visuals",
+    "/openarm/openarm_right_link2/visuals",
+    "/openarm/openarm_right_link3/visuals",
+    "/openarm/openarm_right_link4/visuals",
+    "/openarm/openarm_right_link5/visuals",
+    "/openarm/openarm_right_link6/visuals",
+    "/openarm/openarm_right_link7/visuals",
+    "/openarm/tesollo_right/rl_dg_1_1/visuals",
+    "/openarm/tesollo_right/rl_dg_1_2/visuals",
+    "/openarm/tesollo_right/rl_dg_1_3/visuals",
+    "/openarm/tesollo_right/rl_dg_1_4/visuals",
+    "/openarm/tesollo_right/rl_dg_1_tip/visuals",
+    "/openarm/tesollo_right/rl_dg_2_1/visuals",
+    "/openarm/tesollo_right/rl_dg_2_2/visuals",
+    "/openarm/tesollo_right/rl_dg_2_3/visuals",
+    "/openarm/tesollo_right/rl_dg_2_4/visuals",
+    "/openarm/tesollo_right/rl_dg_2_tip/visuals",
+    "/openarm/tesollo_right/rl_dg_3_1/visuals",
+    "/openarm/tesollo_right/rl_dg_3_2/visuals",
+    "/openarm/tesollo_right/rl_dg_3_3/visuals",
+    "/openarm/tesollo_right/rl_dg_3_4/visuals",
+    "/openarm/tesollo_right/rl_dg_3_tip/visuals",
+    "/openarm/tesollo_right/rl_dg_4_1/visuals",
+    "/openarm/tesollo_right/rl_dg_4_2/visuals",
+    "/openarm/tesollo_right/rl_dg_4_3/visuals",
+    "/openarm/tesollo_right/rl_dg_4_4/visuals",
+    "/openarm/tesollo_right/rl_dg_4_tip/visuals",
+    "/openarm/tesollo_right/rl_dg_5_1/visuals",
+    "/openarm/tesollo_right/rl_dg_5_2/visuals",
+    "/openarm/tesollo_right/rl_dg_5_3/visuals",
+    "/openarm/tesollo_right/rl_dg_5_4/visuals",
+    "/openarm/tesollo_right/rl_dg_5_tip/visuals",
+    "/openarm/tesollo_right/rl_dg_base/visuals",
+    "/openarm/tesollo_right/rl_dg_mount/visuals",
+    "/openarm/tesollo_right/rl_dg_palm/visuals",
+    "/openarm/tesollo_right/rl_dg_palm_extra/visuals",
+    "/openarm/world/visuals"
+  ],
+  "eval_initial_pose": {
+    "LEFT": {
+      "openarm_left_joint1": {
+        "deg": 20.0,
+        "rad": 0.34906585
+      },
+      "openarm_left_joint2": {
+        "deg": 0.0,
+        "rad": 0.0
+      },
+      "openarm_left_joint3": {
+        "deg": 0.0,
+        "rad": 0.0
+      },
+      "openarm_left_joint4": {
+        "deg": 60.0,
+        "rad": 1.047197551
+      },
+      "openarm_left_joint5": {
+        "deg": 0.0,
+        "rad": 0.0
+      },
+      "openarm_left_joint6": {
+        "deg": 0.0,
+        "rad": 0.0
+      },
+      "openarm_left_joint7": {
+        "deg": -44.0,
+        "rad": -0.767944871
+      }
+    },
+    "RIGHT": {
+      "openarm_right_joint1": {
+        "deg": -20.0,
+        "rad": -0.34906585
+      },
+      "openarm_right_joint2": {
+        "deg": 40.0,
+        "rad": 0.698131701
+      },
+      "openarm_right_joint3": {
+        "deg": -10.0,
+        "rad": -0.174532925
+      },
+      "openarm_right_joint4": {
+        "deg": 60.0,
+        "rad": 1.047197551
+      },
+      "openarm_right_joint5": {
+        "deg": 30.0,
+        "rad": 0.523598776
+      },
+      "openarm_right_joint6": {
+        "deg": 15.0,
+        "rad": 0.261799388
+      },
+      "openarm_right_joint7": {
+        "deg": 44.0,
+        "rad": 0.767944871
+      }
+    }
+  }
+}

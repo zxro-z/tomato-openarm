@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: piper_tomato_one_arm
+    relative_path: urdf/one_piper_tomato.urdf
+  srdf:
+    relative_path: config/one_piper_tomato.srdf
+  package_settings:
+    author_name: zxro
+    author_email: zxro@todo.todo
+    generated_timestamp: 1785483352

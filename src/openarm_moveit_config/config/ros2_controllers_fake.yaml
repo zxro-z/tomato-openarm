@@ -1,0 +1,47 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    left_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    right_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    left_gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    right_gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+left_arm_controller:
+  ros__parameters:
+    joints: [openarm_left_joint1, openarm_left_joint2, openarm_left_joint3, openarm_left_joint4, openarm_left_joint5, openarm_left_joint6, openarm_left_joint7]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    # GenericSystem receives the canonical position state from the URDF.
+    # Do not replace it with the controller's default zero command on
+    # activation; use the hardware state as the initial command instead.
+    set_last_command_interface_value_as_state_on_activation: false
+
+right_arm_controller:
+  ros__parameters:
+    joints: [openarm_right_joint1, openarm_right_joint2, openarm_right_joint3, openarm_right_joint4, openarm_right_joint5, openarm_right_joint6, openarm_right_joint7]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    # Keep the fake right arm's first published state at canonical HOME.
+    set_last_command_interface_value_as_state_on_activation: false
+
+left_gripper_controller:
+  ros__parameters:
+    joints: [openarm_left_finger_joint1, openarm_left_finger_joint2]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    # Preserve the URDF-defined 0.044 m open state on fake startup.
+    set_last_command_interface_value_as_state_on_activation: false
+
+right_gripper_controller:
+  ros__parameters:
+    joints: [openarm_right_finger_joint1, openarm_right_finger_joint2]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    # Preserve the URDF-defined 0.044 m open state on fake startup.
+    set_last_command_interface_value_as_state_on_activation: false

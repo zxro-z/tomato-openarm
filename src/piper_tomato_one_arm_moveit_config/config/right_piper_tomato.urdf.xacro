@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="right_piper_tomato">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import right_piper_tomato urdf file -->
+    <xacro:include filename="$(find piper_tomato_one_arm)/urdf/one_piper_tomato.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="right_piper_tomato.ros2_control.xacro" />
+
+
+    <xacro:right_piper_tomato_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

@@ -1,0 +1,59 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Enabled: true
+      Name: Grid
+      Plane: XY
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Topic: /baseline_a/camera_visual_markers
+      Name: Baseline A Cameras
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Topic: /baseline_a/observation_target
+      Name: Baseline A Observation Target and TCP Axes
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Topic: /baseline_a/grasp_transform_calibration
+      Name: Baseline A Grasp Transform Calibration
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Topic: /baseline_a/grasp_contact_geometry
+      Name: Baseline A Grasp Contact Geometry
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Marker Scale: 0.3
+      Name: Baseline A TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+    - Class: moveit_rviz_plugin/MotionPlanning
+      Enabled: true
+      Move Group Namespace: ""
+      Name: MotionPlanning
+      Planning Scene Topic: monitored_planning_scene
+      Robot Description: robot_description
+      Scene Geometry:
+        Scene Alpha: 0.9
+      Planned Path:
+        Trajectory Topic: move_group/display_planned_path
+      Planning Request:
+        Planning Group: left_arm
+      Query Goal State:
+        Joint Violation Color: 255; 0; 0
+      Query Start State:
+        Joint Violation Color: 255; 0; 0
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select

@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="openarm">
+  <xacro:arg name="tesollo_tcp_xyz" default="0 0 0"/>
+  <xacro:arg name="tesollo_tcp_rpy" default="0 0 0"/>
+  <joint name="AssemblerFixedJoint" type="fixed">
+    <origin xyz="0. 0.0000002 0.0565764" rpy="0. 0. -1.5707964"/>
+    <parent link="openarm_right_link7"/>
+    <child link="rl_dg_mount"/>
+  </joint>
+  <joint name="TS_F_A_left_base_link_tip_joint" type="fixed">
+    <origin xyz="0. -0.069 -0.001" rpy="1.57 0. 0. "/>
+    <parent link="TS_F_A_left_base_link"/>
+    <child link="TS_F_A_left_tip_link"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_1" type="fixed">
+    <origin xyz="-0.00001 0. 0.02 " rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_1"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_2" type="fixed">
+    <origin xyz="0. 0. 0.0192" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_2"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_3" type="fixed">
+    <origin xyz="0.00547 0. 0.02 " rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_3"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_4" type="fixed">
+    <origin xyz="0. 0. 0.02465" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_4"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_5" type="fixed">
+    <origin xyz="-0.0001 0. 0.0285" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_5"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_6" type="fixed">
+    <origin xyz="0.00551 0. 0.0285 " rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_6"/>
+  </joint>
+  <joint name="TS_F_A_left_pad_pad_joint_7" type="fixed">
+    <origin xyz="-0.00001 0. 0.01361" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_pad"/>
+    <child link="TS_F_A_left_pad_7"/>
+  </joint>
+  <joint name="TS_F_A_left_root_joint" type="fixed">
+    <origin xyz="0. 0.002147 0.0661995" rpy="1.5708 0. 0. "/>
+    <parent link="openarm_left_left_finger"/>
+    <child link="TS_F_A_left_base_link"/>
+  </joint>
+  <joint name="TS_F_A_left_tip_link_pad_joint" type="fixed">
+    <origin xyz="-0.0055 0.0001 -0.0942" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_left_tip_link"/>
+    <child link="TS_F_A_left_pad"/>
+  </joint>
+  <joint name="TS_F_A_right_base_link_tip_joint" type="fixed">
+    <origin xyz="0. -0.069 -0.001" rpy="1.57 0. 0. "/>
+    <parent link="TS_F_A_right_base_link"/>
+    <child link="TS_F_A_right_tip_link"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_1" type="fixed">
+    <origin xyz="-0.00001 0. 0.02 " rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_1"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_2" type="fixed">
+    <origin xyz="0. 0. 0.0192" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_2"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_3" type="fixed">
+    <origin xyz="0.00547 0. 0.02 " rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_3"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_4" type="fixed">
+    <origin xyz="0. 0. 0.02465" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_4"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_5" type="fixed">
+    <origin xyz="-0.0001 0. 0.0285" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_5"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_6" type="fixed">
+    <origin xyz="0.00551 0. 0.0285 " rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_6"/>
+  </joint>
+  <joint name="TS_F_A_right_pad_pad_joint_7" type="fixed">
+    <origin xyz="-0.00001 0. 0.01361" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_pad"/>
+    <child link="TS_F_A_right_pad_7"/>
+  </joint>
+  <joint name="TS_F_A_right_root_joint" type="fixed">
+    <origin xyz="0. 0.0020218 -0.0661995" rpy="-1.5707964 0. 3.1415927"/>
+    <parent link="openarm_left_right_finger"/>
+    <child link="TS_F_A_right_base_link"/>
+  </joint>
+  <joint name="TS_F_A_right_tip_link_pad_joint" type="fixed">
+    <origin xyz="-0.0055 0.0001 -0.0942" rpy="0. 0. 0."/>
+    <parent link="TS_F_A_right_tip_link"/>
+    <child link="TS_F_A_right_pad"/>
+  </joint>
+  <joint name="left_openarm_hand_joint" type="fixed">
+    <origin xyz="0. 0. -0.1001" rpy="3.1415927 0. 0. "/>
+    <parent link="openarm_left_link7"/>
+    <child link="openarm_left_hand"/>
+  </joint>
+  <joint name="openarm_body_world_joint" type="fixed">
+    <origin xyz="-0.17858 0.24336 -0.00468" rpy="0. 0. 0."/>
+    <parent link="world"/>
+    <child link="openarm_body_link0"/>
+  </joint>
+  <joint name="openarm_left_finger_joint1" type="prismatic">
+    <origin xyz="0. -0.006 0.015" rpy="3.1415927 0. 0. "/>
+    <parent link="openarm_left_hand"/>
+    <child link="openarm_left_right_finger"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="0.044" effort="333." velocity="10."/>
+  </joint>
+  <joint name="openarm_left_finger_joint2" type="prismatic">
+    <parent link="openarm_left_hand"/>
+    <child link="openarm_left_left_finger"/>
+    <origin rpy="0 0 0" xyz="0 0.006 0.015"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="333" lower="-0.0088" upper="0.0528" velocity="10.0"/>
+    <mimic joint="openarm_left_finger_joint1"/>
+  </joint>
+  <joint name="openarm_left_hand_tcp_joint" type="fixed">
+    <origin xyz="0. -0. 0.08" rpy="0. 0. 0."/>
+    <parent link="openarm_left_hand"/>
+    <child link="openarm_left_hand_tcp"/>
+  </joint>
+  <joint name="openarm_left_joint1" type="revolute">
+    <origin xyz="0. -0. 0.0625" rpy="0.0000001 0. 0. "/>
+    <parent link="openarm_left_link0"/>
+    <child link="openarm_left_link1"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-3.4906588" upper="1.3962629" effort="40." velocity="16.7546644"/>
+  </joint>
+  <joint name="openarm_left_joint2" type="revolute">
+    <origin xyz="-0.0301 0. 0.06 " rpy="1.5707964 0. 3.1415927"/>
+    <parent link="openarm_left_link1"/>
+    <child link="openarm_left_link2"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-3.3161253" upper="0.1745327" effort="40." velocity="16.7546644"/>
+  </joint>
+  <joint name="openarm_left_joint3" type="revolute">
+    <origin xyz="0.0301 0. 0.06625" rpy="0. 0. 0."/>
+    <parent link="openarm_left_link2"/>
+    <child link="openarm_left_link3"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-1.5707959" upper="1.5707959" effort="27." velocity="5.4454257"/>
+  </joint>
+  <joint name="openarm_left_joint4" type="revolute">
+    <origin xyz="0. 0.0315 0.15375" rpy="0. 0. 0."/>
+    <parent link="openarm_left_link3"/>
+    <child link="openarm_left_link4"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="2.4434607" effort="27." velocity="5.4454257"/>
+  </joint>
+  <joint name="openarm_left_joint5" type="revolute">
+    <origin xyz="0. -0.0315 0.0955" rpy="0. 0. 0."/>
+    <parent link="openarm_left_link4"/>
+    <child link="openarm_left_link5"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-1.5707959" upper="1.5707959" effort="7." velocity="20.9439446"/>
+  </joint>
+  <joint name="openarm_left_joint6" type="revolute">
+    <origin xyz="0.0375 0. 0.1205" rpy="0. 0. 0."/>
+    <parent link="openarm_left_link5"/>
+    <child link="openarm_left_link6"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.785398" upper="0.785398" effort="7." velocity="20.9439446"/>
+  </joint>
+  <joint name="openarm_left_joint7" type="revolute">
+    <origin xyz="-0.0375 0. 0. " rpy="3.1415927 0. 0. "/>
+    <parent link="openarm_left_link6"/>
+    <child link="openarm_left_link7"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707959" upper="1.5707959" effort="7." velocity="20.9439446"/>
+  </joint>
+  <joint name="openarm_left_openarm_body_link0_joint" type="fixed">
+    <!-- <origin xyz="0. 0.031 0.505" rpy="-1.5708 0. 0. "/> -->
+    <origin xyz="0. 0.031 0.605" rpy="-1.5708 0. 0. "/>
+    <parent link="openarm_body_link0"/>
+    <child link="openarm_left_link0"/>
+  </joint>
+  <joint name="openarm_right_joint1" type="revolute">
+    <origin xyz="0. 0. 0.0625" rpy="-0.0000001 0. 0. "/>
+    <parent link="openarm_right_link0"/>
+    <child link="openarm_right_link1"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-1.3962629" upper="3.4906588" effort="40." velocity="16.7546644"/>
+  </joint>
+  <joint name="openarm_right_joint2" type="revolute">
+    <origin xyz="-0.0301 -0. 0.06 " rpy="-1.5707964 0. -3.1415927"/>
+    <parent link="openarm_right_link1"/>
+    <child link="openarm_right_link2"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.1745327" upper="3.3161253" effort="40." velocity="16.7546644"/>
+  </joint>
+  <joint name="openarm_right_joint3" type="revolute">
+    <origin xyz="0.0301 0. 0.06625" rpy="0. 0. 0."/>
+    <parent link="openarm_right_link2"/>
+    <child link="openarm_right_link3"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-1.5707959" upper="1.5707959" effort="27." velocity="5.4454257"/>
+  </joint>
+  <joint name="openarm_right_joint4" type="revolute">
+    <origin xyz="0. 0.0315 0.15375" rpy="0. 0. 0."/>
+    <parent link="openarm_right_link3"/>
+    <child link="openarm_right_link4"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="2.4434607" effort="27." velocity="5.4454257"/>
+  </joint>
+  <joint name="openarm_right_joint5" type="revolute">
+    <origin xyz="0. -0.0315 0.0955" rpy="0. 0. 0."/>
+    <parent link="openarm_right_link4"/>
+    <child link="openarm_right_link5"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-1.5707959" upper="1.5707959" effort="7." velocity="20.9439446"/>
+  </joint>
+  <joint name="openarm_right_joint6" type="revolute">
+    <origin xyz="0.0375 -0. 0.1205" rpy="0. 0. 0."/>
+    <parent link="openarm_right_link5"/>
+    <child link="openarm_right_link6"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.785398" upper="0.785398" effort="7." velocity="20.9439446"/>
+  </joint>
+  <joint name="openarm_right_joint7" type="revolute">
+    <origin xyz="-0.0375 0. 0. " rpy="0. 0. 0."/>
+    <parent link="openarm_right_link6"/>
+    <child link="openarm_right_link7"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707959" upper="1.5707959" effort="7." velocity="20.9439446"/>
+  </joint>
+  <joint name="openarm_right_openarm_body_link0_joint" type="fixed">
+    <!-- <origin xyz="0. -0.031 0.505" rpy="1.5708 0. 0. "/> -->
+    <origin xyz="0. -0.031 0.605" rpy="1.5708 0. 0. "/>
+    <parent link="openarm_body_link0"/>
+    <child link="openarm_right_link0"/>
+  </joint>
+  <joint name="rj_dg_1_1" type="revolute">
+    <origin xyz="-0.0162 0.019 0.0128" rpy="0. 0. 0."/>
+    <parent link="rl_dg_palm"/>
+    <child link="tesollo_right_rl_dg_1_1"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.3839724" upper="0.8901179" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_1_2" type="revolute">
+    <origin xyz="0.04195 0. 0. " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_1_1"/>
+    <child link="tesollo_right_rl_dg_1_2"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-3.1415927" upper="0." effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_1_3" type="revolute">
+    <origin xyz="0. 0.031 0. " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_1_2"/>
+    <child link="tesollo_right_rl_dg_1_3"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_1_4" type="revolute">
+    <origin xyz="0. 0.0388 0. " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_1_3"/>
+    <child link="tesollo_right_rl_dg_1_4"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_1_tip" type="fixed">
+    <origin xyz="0. 0.0363 0. " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_1_4"/>
+    <child link="tesollo_right_rl_dg_1_tip"/>
+  </joint>
+  <joint name="rj_dg_2_1" type="revolute">
+    <origin xyz="-0.0071 0.027 0.0661" rpy="0. 0. 0."/>
+    <parent link="rl_dg_palm"/>
+    <child link="tesollo_right_rl_dg_2_1"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.418879" upper="0.6108652" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_2_2" type="revolute">
+    <origin xyz="0.01765 0. 0.0265 " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_2_1"/>
+    <child link="tesollo_right_rl_dg_2_2"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="2.0071286" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_2_3" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_2_2"/>
+    <child link="tesollo_right_rl_dg_2_3"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_2_4" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_2_3"/>
+    <child link="tesollo_right_rl_dg_2_4"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_2_tip" type="fixed">
+    <origin xyz="0. 0. 0.0255" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_2_4"/>
+    <child link="tesollo_right_rl_dg_2_tip"/>
+  </joint>
+  <joint name="rj_dg_3_1" type="revolute">
+    <origin xyz="-0.0071 0.0025 0.0701" rpy="0. 0. 0."/>
+    <parent link="rl_dg_palm"/>
+    <child link="tesollo_right_rl_dg_3_1"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.6108652" upper="0.6108652" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_3_2" type="revolute">
+    <origin xyz="0.01765 0. 0.0265 " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_3_1"/>
+    <child link="tesollo_right_rl_dg_3_2"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="1.9547686" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_3_3" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_3_2"/>
+    <child link="tesollo_right_rl_dg_3_3"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_3_4" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_3_3"/>
+    <child link="tesollo_right_rl_dg_3_4"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_3_tip" type="fixed">
+    <origin xyz="0. 0. 0.0255" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_3_4"/>
+    <child link="tesollo_right_rl_dg_3_tip"/>
+  </joint>
+  <joint name="rj_dg_4_1" type="revolute">
+    <origin xyz="-0.0071 -0.022 0.0621" rpy="0. 0. 0."/>
+    <parent link="rl_dg_palm"/>
+    <child link="tesollo_right_rl_dg_4_1"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.6108652" upper="0.418879" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_4_2" type="revolute">
+    <origin xyz="0.01765 0. 0.0265 " rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_4_1"/>
+    <child link="tesollo_right_rl_dg_4_2"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="0." upper="1.9024088" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_4_3" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_4_2"/>
+    <child link="tesollo_right_rl_dg_4_3"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_4_4" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_4_3"/>
+    <child link="tesollo_right_rl_dg_4_4"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_4_tip" type="fixed">
+    <origin xyz="0. 0. 0.0255" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_4_4"/>
+    <child link="tesollo_right_rl_dg_4_tip"/>
+  </joint>
+  <joint name="rj_dg_5_1" type="revolute">
+    <origin xyz="0.0103 -0.0195 0.0182" rpy="0. 0. 0."/>
+    <parent link="rl_dg_palm"/>
+    <child link="tesollo_right_rl_dg_5_1"/>
+    <axis xyz="0. 0. 1."/>
+    <limit lower="-0.0174533" upper="1.0471976" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_5_2" type="revolute">
+    <origin xyz="0. -0.028 0.0381" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_5_1"/>
+    <child link="tesollo_right_rl_dg_5_2"/>
+    <axis xyz="1. 0. 0."/>
+    <limit lower="-0.418879" upper="0.6108652" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_5_3" type="revolute">
+    <origin xyz="0. 0. 0.031" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_5_2"/>
+    <child link="tesollo_right_rl_dg_5_3"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_5_4" type="revolute">
+    <origin xyz="0. 0. 0.0388" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_5_3"/>
+    <child link="tesollo_right_rl_dg_5_4"/>
+    <axis xyz="0. 1. 0."/>
+    <limit lower="-1.5707963" upper="1.5707963" effort="7.5" velocity="3.1415927"/>
+  </joint>
+  <joint name="rj_dg_5_tip" type="fixed">
+    <origin xyz="0. 0. 0.0363" rpy="0. 0. 0."/>
+    <parent link="tesollo_right_rl_dg_5_4"/>
+    <child link="tesollo_right_rl_dg_5_tip"/>
+  </joint>
+  <joint name="rj_dg_base" type="fixed">
+    <origin xyz="-0. 0. 0.0040031" rpy="0. 0. 0."/>
+    <parent link="rl_dg_mount"/>
+    <child link="rl_dg_base"/>
+  </joint>
+  <joint name="rj_dg_palm" type="fixed">
+    <origin xyz="0. 0. 0.0698" rpy="0. 0. 0."/>
+    <parent link="rl_dg_base"/>
+    <child link="rl_dg_palm"/>
+  </joint>
+  <joint name="rj_dg_palm_extra" type="fixed">
+    <origin xyz="0.07 0. 0.06" rpy="0. 0. 0."/>
+    <parent link="rl_dg_palm"/>
+    <child link="rl_dg_palm_extra"/>
+  </joint>
+  <link name="TS_F_A_left_base_link"/>
+  <link name="TS_F_A_left_pad">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.00001" ixy="0." ixz="0." iyy="0.00001" iyz="0." izz="0.00001"/>
+    </inertial>
+  </link>
+  <link name="TS_F_A_left_pad_1">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_1_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_1_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_pad_2">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_2_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_2_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_pad_3">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_3_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_3_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_pad_4">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_4_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_4_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_pad_5">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_5_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_5_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_pad_6">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_6_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_6_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_pad_7">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_7_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_pad_7_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_left_tip_link">
+    <inertial>
+      <origin xyz="0.0168357 -0.0025451 -0.0000024" rpy="0. 0. 0."/>
+      <mass value="0.004353"/>
+      <inertia ixx="0.0000199" ixy="-0.0000006" ixz="0.0000049" iyy="0.0000208" iyz="0.0000026" izz="0.0000017"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_tip_link_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_left_tip_link_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_base_link"/>
+  <link name="TS_F_A_right_pad">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.00001" ixy="0." ixz="0." iyy="0.00001" iyz="0." izz="0.00001"/>
+    </inertial>
+  </link>
+  <link name="TS_F_A_right_pad_1">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_1_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_1_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_pad_2">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_2_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_2_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_pad_3">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_3_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_3_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_pad_4">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_4_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_4_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_pad_5">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_5_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_5_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_pad_6">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_6_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_6_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_pad_7">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="-0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_7_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_pad_7_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="TS_F_A_right_tip_link">
+    <inertial>
+      <origin xyz="0.0168357 -0.0025451 -0.0000024" rpy="0. 0. 0."/>
+      <mass value="0.004353"/>
+      <inertia ixx="0.0000199" ixy="-0.0000006" ixz="0.0000049" iyy="0.0000208" iyz="0.0000026" izz="0.0000017"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_tip_link_visuals.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/TS_F_A_right_tip_link_collisions.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_body_link0">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="13.8900003"/>
+      <inertia ixx="1.653" ixy="0." ixz="0." iyy="1.653" iyz="0." izz="0.051"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_body_link0_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_body_link0_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_body_link0_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_hand">
+    <inertial>
+      <origin xyz="0. 0.002 0.03 " rpy="0. 0. 0."/>
+      <mass value="0.35"/>
+      <inertia ixx="0.0002473" ixy="0.000001" ixz="0.000001" iyy="0.0000176" iyz="0.000001" izz="0.0002521"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.6585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_hand_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.6585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_hand_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.6585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_hand_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_hand_tcp">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+  </link>
+  <link name="openarm_left_left_finger">
+    <inertial>
+      <origin xyz="0.0064528 0.01702 0.0219685" rpy="0. 0. 0."/>
+      <mass value="0.0360255"/>
+      <inertia ixx="0.0000024" ixy="0.000001" ixz="0.000001" iyy="0.0000024" iyz="0.000001" izz="0.0000007"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. -0.05 -0.673001" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_left_finger_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. -0.05 -0.673001" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_left_finger_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. -0.05 -0.673001" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_left_finger_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link0">
+    <inertial>
+      <origin xyz="-0.0009483 -0.000158 0.0307686" rpy="0. 0. 0."/>
+      <mass value="1.1432285"/>
+      <inertia ixx="0.001128" ixy="-0.000004" ixz="-0.000033" iyy="0.000962" iyz="-0.000007" izz="0.00147"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0.0000001 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link0_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0.0000001 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link0_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0.0000001 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link0_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link1">
+    <inertial>
+      <origin xyz="0.0011468 -0.0000332 0.0539528" rpy="0. 0. 0."/>
+      <mass value="1.1416684"/>
+      <inertia ixx="0.001567" ixy="-0.000001" ixz="-0.000029" iyy="0.001273" iyz="0.000001" izz="0.001016"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.0625" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link1_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.0625" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link1_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.0625" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link1_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link2">
+    <inertial>
+      <origin xyz="0.0083963 0. 0.0325665" rpy="0. 0. 0."/>
+      <mass value="0.2775093"/>
+      <inertia ixx="0.000359" ixy="0.000001" ixz="-0.000109" iyy="0.000376" iyz="0.000001" izz="0.000232"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0301 0. -0.1225" rpy="-0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link2_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0301 0. -0.1225" rpy="-0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link2_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0301 0. -0.1225" rpy="-0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link2_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link3">
+    <inertial>
+      <origin xyz="-0.0021048 -0.0005549 0.0904747" rpy="0. 0. 0."/>
+      <mass value="1.0738634"/>
+      <inertia ixx="0.004372" ixy="0.000001" ixz="0.000011" iyy="0.004319" iyz="-0.000036" izz="0.000661"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.18875" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link3_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.18875" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link3_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.18875" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link3_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link4">
+    <inertial>
+      <origin xyz="-0.0029007 -0.0303058 0.0633964" rpy="0. 0. 0."/>
+      <mass value="0.6348535"/>
+      <inertia ixx="0.000623" ixy="-0.000001" ixz="-0.000019" iyy="0.000511" iyz="0.000038" izz="0.000334"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. -0.0315 -0.3425" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link4_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. -0.0315 -0.3425" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link4_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. -0.0315 -0.3425" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link4_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link5">
+    <inertial>
+      <origin xyz="-0.0030497 -0.0008867 0.0430798" rpy="0. 0. 0."/>
+      <mass value="0.6156588"/>
+      <inertia ixx="0.000423" ixy="-0.000008" ixz="0.000006" iyy="0.000445" iyz="-0.000006" izz="0.000324"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.438" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link5_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.438" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link5_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.438" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link5_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link6">
+    <inertial>
+      <origin xyz="-0.0371366 -0.0003323 -0.000095 " rpy="0. 0. 0."/>
+      <mass value="0.4752028"/>
+      <inertia ixx="0.000143" ixy="0.000001" ixz="0.000001" iyy="0.000157" iyz="0.000001" izz="0.000159"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0375 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link6_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0375 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link6_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0375 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link6_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_link7">
+    <inertial>
+      <origin xyz="0.0000688 -0.0126618 0.0695195" rpy="0. 0. 0."/>
+      <mass value="0.4659771"/>
+      <inertia ixx="0.000639" ixy="0.000001" ixz="0.000001" iyy="0.000497" iyz="0.000089" izz="0.000342"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0.5585" rpy="3.1415927 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link7_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0.5585" rpy="3.1415927 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link7_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0.5585" rpy="3.1415927 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_link7_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_left_right_finger">
+    <inertial>
+      <origin xyz="0.0064528 -0.01702 0.0219685" rpy="0. 0. 0."/>
+      <mass value="0.0360255"/>
+      <inertia ixx="0.0000024" ixy="0.000001" ixz="0.000001" iyy="0.0000024" iyz="0.000001" izz="0.0000007"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. -0.05 0.673001" rpy="3.1415927 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_right_finger_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. -0.05 0.673001" rpy="3.1415927 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_right_finger_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. -0.05 0.673001" rpy="3.1415927 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_left_right_finger_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link0">
+    <inertial>
+      <origin xyz="-0.0009483 0.000158 0.0307686" rpy="0. 0. 0."/>
+      <mass value="1.1432285"/>
+      <inertia ixx="0.001128" ixy="-0.000004" ixz="-0.000033" iyy="0.000962" iyz="-0.000007" izz="0.00147"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="-0.0000001 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link0_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="-0.0000001 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link0_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="-0.0000001 0. 0. "/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link0_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link1">
+    <inertial>
+      <origin xyz="0.0011468 0.0000332 0.0539528" rpy="0. 0. 0."/>
+      <mass value="1.1416684"/>
+      <inertia ixx="0.001567" ixy="-0.000001" ixz="-0.000029" iyy="0.001273" iyz="0.000001" izz="0.001016"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. -0. -0.0625" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link1_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. -0. -0.0625" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link1_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. -0. -0.0625" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link1_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link2">
+    <inertial>
+      <origin xyz="0.0083963 -0. 0.0325665" rpy="0. 0. 0."/>
+      <mass value="0.2775093"/>
+      <inertia ixx="0.000359" ixy="0.000001" ixz="-0.000109" iyy="0.000376" iyz="0.000001" izz="0.000232"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0301 -0. -0.1225" rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link2_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0301 -0. -0.1225" rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link2_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0301 -0. -0.1225" rpy="0. 0. 3.1415927"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link2_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link3">
+    <inertial>
+      <origin xyz="-0.0021048 0.0005549 0.0904747" rpy="0. 0. 0."/>
+      <mass value="1.0738634"/>
+      <inertia ixx="0.004372" ixy="0.000001" ixz="0.000011" iyy="0.004319" iyz="-0.000036" izz="0.000661"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.18875" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link3_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.18875" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link3_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.18875" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link3_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link4">
+    <inertial>
+      <origin xyz="-0.0029007 -0.0303058 0.0633964" rpy="0. 0. 0."/>
+      <mass value="0.6348535"/>
+      <inertia ixx="0.000623" ixy="-0.000001" ixz="-0.000019" iyy="0.000511" iyz="0.000038" izz="0.000334"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. -0.0315 -0.3425" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link4_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. -0.0315 -0.3425" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link4_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. -0.0315 -0.3425" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link4_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link5">
+    <inertial>
+      <origin xyz="-0.0030497 0.0008867 0.0430798" rpy="0. 0. 0."/>
+      <mass value="0.6156588"/>
+      <inertia ixx="0.000423" ixy="-0.000008" ixz="0.000006" iyy="0.000445" iyz="-0.000006" izz="0.000324"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.438" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link5_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.438" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link5_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.438" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link5_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link6">
+    <inertial>
+      <origin xyz="-0.0371366 0.0003323 -0.000095 " rpy="0. 0. 0."/>
+      <mass value="0.4752028"/>
+      <inertia ixx="0.000143" ixy="0.000001" ixz="0.000001" iyy="0.000157" iyz="0.000001" izz="0.000159"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0375 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link6_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0.0375 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link6_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.0375 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link6_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="openarm_right_link7">
+    <inertial>
+      <origin xyz="0.0000688 0.0126618 0.0695195" rpy="0. 0. 0."/>
+      <mass value="0.4659771"/>
+      <inertia ixx="0.000639" ixy="0.000001" ixz="0.000001" iyy="0.000497" iyz="0.000089" izz="0.000342"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link7_visual_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link7_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. -0.5585" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/openarm_right_link7_collision_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rl_dg_palm_extra">
+    <inertial>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <mass value="0.0001"/>
+      <inertia ixx="0." ixy="0." ixz="0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+  </link>
+  <link name="tesollo_right_rl_dg_1_1">
+    <inertial>
+      <origin xyz="0.021473 0.0000031 0.0028146" rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000043" ixy="0." ixz="0.0000029" iyy="0.0000137" iyz="-0." izz="0.0000122"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_1_1_visuals_rl_dg_1_1_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_1_2">
+    <inertial>
+      <origin xyz="0.0005563 0.0155 0.0005563" rpy="0. 0. 0."/>
+      <mass value="0.025"/>
+      <inertia ixx="0.000002" ixy="-0.0000002" ixz="0." iyy="0.0000015" iyz="0.0000002" izz="0.000002"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_1_2_visuals_rl_dg_1_2_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_1_3">
+    <inertial>
+      <origin xyz="0.000023 0.014842 0.0000047" rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.000006" ixy="-0.0000004" ixz="-0." iyy="0.0000025" iyz="-0." izz="0.0000064"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_1_3_visuals_rl_dg_1_3_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_1_4">
+    <inertial>
+      <origin xyz="-0.0002048 0.018795 -0.0003654" rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000095" ixy="-0.0000002" ixz="0." iyy="0.0000029" iyz="0.0000004" izz="0.0000098"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_1_4_visuals_rl_dg_1_4_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_1_tip">
+    <inertial>
+      <origin xyz="0.0000005 0.007157 0.0038063" rpy="0. 0. 0."/>
+      <mass value="0.005"/>
+      <inertia ixx="0.0000002" ixy="-0." ixz="0." iyy="0.0000003" iyz="0." izz="0.0000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_1_tip_visuals_rl_dg_1_tip_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_1_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_2_1">
+    <inertial>
+      <origin xyz="0.001061 0.0002442 0.023499 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000066" ixy="0." ixz="-0.0000012" iyy="0.0000095" iyz="0.0000001" izz="0.0000071"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_2_1_visuals_rl_dg_2_1_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_2_2">
+    <inertial>
+      <origin xyz="-0.0000047 0.000023 0.023958 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="0." ixz="-0." iyy="0.000006" iyz="0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_2_2_visuals_rl_dg_2_2_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_2_3">
+    <inertial>
+      <origin xyz="-0.0000047 0.000023 0.023958 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="0." ixz="-0." iyy="0.000006" iyz="0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_2_3_visuals_rl_dg_2_3_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_2_4">
+    <inertial>
+      <origin xyz="-0.0007082 0.0004304 0.017842 " rpy="0. 0. 0."/>
+      <mass value="0.025"/>
+      <inertia ixx="0.0000029" ixy="-0." ixz="0.0000002" iyy="0.0000024" iyz="0.0000002" izz="0.0000017"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_2_4_visuals_rl_dg_2_4_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_2_tip">
+    <inertial>
+      <origin xyz="0.0038063 0.0000005 0.007157 " rpy="0. 0. 0."/>
+      <mass value="0.005"/>
+      <inertia ixx="0.0000003" ixy="0." ixz="0." iyy="0.0000002" iyz="-0." izz="0.0000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_2_tip_visuals_rl_dg_2_tip_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_2_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_3_1">
+    <inertial>
+      <origin xyz="0.0012558 -0.000177 0.023374 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000062" ixy="0.0000001" ixz="-0.0000012" iyy="0.0000093" iyz="0." izz="0.0000068"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_3_1_visuals_rl_dg_3_1_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_3_2">
+    <inertial>
+      <origin xyz="-0.0000047 0.000023 0.023958 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="0." ixz="-0." iyy="0.000006" iyz="0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_3_2_visuals_rl_dg_3_2_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_3_3">
+    <inertial>
+      <origin xyz="-0.0000047 0.000023 0.023958 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="0." ixz="-0." iyy="0.000006" iyz="0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_3_3_visuals_rl_dg_3_3_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_3_4">
+    <inertial>
+      <origin xyz="-0.0007082 0.0004304 0.017842 " rpy="0. 0. 0."/>
+      <mass value="0.025"/>
+      <inertia ixx="0.0000029" ixy="-0." ixz="0.0000002" iyy="0.0000024" iyz="0.0000002" izz="0.0000017"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_3_4_visuals_rl_dg_3_4_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_3_tip">
+    <inertial>
+      <origin xyz="0.0038063 0.0000005 0.007157 " rpy="0. 0. 0."/>
+      <mass value="0.005"/>
+      <inertia ixx="0.0000003" ixy="0." ixz="0." iyy="0.0000002" iyz="-0." izz="0.0000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_3_tip_visuals_rl_dg_3_tip_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_3_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_4_1">
+    <inertial>
+      <origin xyz="0.0000606 -0.0005857 0.023499 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000066" ixy="0.0000002" ixz="-0.0000012" iyy="0.0000095" iyz="-0." izz="0.0000071"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_4_1_visuals_rl_dg_4_1_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_4_2">
+    <inertial>
+      <origin xyz="-0.0000047 0.000023 0.023958 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="0." ixz="-0." iyy="0.000006" iyz="0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_4_2_visuals_rl_dg_4_2_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_4_3">
+    <inertial>
+      <origin xyz="-0.0000047 0.000023 0.023958 " rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="0." ixz="-0." iyy="0.000006" iyz="0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_4_3_visuals_rl_dg_4_3_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_4_4">
+    <inertial>
+      <origin xyz="-0.0007082 0.0004304 0.017842 " rpy="0. 0. 0."/>
+      <mass value="0.025"/>
+      <inertia ixx="0.0000029" ixy="-0." ixz="0.0000002" iyy="0.0000024" iyz="0.0000002" izz="0.0000017"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_4_4_visuals_rl_dg_4_4_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_4_tip">
+    <inertial>
+      <origin xyz="0.0038063 0.0000005 0.007157 " rpy="0. 0. 0."/>
+      <mass value="0.005"/>
+      <inertia ixx="0.0000003" ixy="0." ixz="0." iyy="0.0000002" iyz="-0." izz="0.0000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_4_tip_visuals_rl_dg_4_tip_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_4_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_5_1">
+    <inertial>
+      <origin xyz="-0.0043301 -0.0250157 0.0140244" rpy="0. 0. 0."/>
+      <mass value="0.055"/>
+      <inertia ixx="0.0000236" ixy="0.0000003" ixz="0.0000023" iyy="0.0000237" iyz="0.0000045" izz="0.0000113"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_5_1_visuals_rl_dg_5_1_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_1_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_5_2">
+    <inertial>
+      <origin xyz="-0.0005376 0.0005376 0.0155001" rpy="0. 0. 0."/>
+      <mass value="0.025"/>
+      <inertia ixx="0.000002" ixy="-0." ixz="-0.0000002" iyy="0.000002" iyz="-0.0000002" izz="0.0000015"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_5_2_visuals_rl_dg_5_2_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_2_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_5_3">
+    <inertial>
+      <origin xyz="0.0000047 0.000023 0.0148419" rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000064" ixy="-0." ixz="-0." iyy="0.000006" iyz="-0.0000004" izz="0.0000025"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_5_3_visuals_rl_dg_5_3_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_3_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_5_4">
+    <inertial>
+      <origin xyz="-0.0003654 -0.0002048 0.0187947" rpy="0. 0. 0."/>
+      <mass value="0.045"/>
+      <inertia ixx="0.0000098" ixy="0." ixz="0.0000004" iyy="0.0000095" iyz="-0.0000002" izz="0.0000029"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_5_4_visuals_rl_dg_5_4_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_4_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tesollo_right_rl_dg_5_tip">
+    <inertial>
+      <origin xyz="0.0038063 0.0000005 0.007157 " rpy="0. 0. 0."/>
+      <mass value="0.005"/>
+      <inertia ixx="0.0000003" ixy="0." ixz="0." iyy="0.0000002" iyz="-0." izz="0.0000003"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/tesollo_right_rl_dg_5_tip_visuals_rl_dg_5_tip_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_5_tip_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rl_dg_base">
+    <inertial>
+      <origin xyz="-0.0005897 0.0005138 0.037363 " rpy="0. 0. 0."/>
+      <mass value="0.45"/>
+      <inertia ixx="0.0004861" ixy="0.0000104" ixz="0.0000172" iyy="0.0004909" iyz="-0.0000052" izz="0.0004337"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_base_visuals_rl_dg_base_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_base_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_base_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rl_dg_mount">
+    <inertial>
+      <origin xyz="-0. -0.0000217 0.0049997" rpy="0. 0. 0."/>
+      <mass value="0.05"/>
+      <inertia ixx="0.000011" ixy="-0." ixz="0." iyy="0.000011" iyz="0." izz="0.0000205"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0. 0. 0.0000031" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_mount_visuals_rl_dg_mount_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="-0. 0. 0.0000031" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_mount_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0. 0. 0.0000031" rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_mount_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="rl_dg_palm">
+    <inertial>
+      <origin xyz="-0.0089577 0.0009558 0.041325 " rpy="0. 0. 0."/>
+      <mass value="0.35"/>
+      <inertia ixx="0.0005266" ixy="0.0000025" ixz="-0.0000223" iyy="0.0004165" iyz="-0.000049" izz="0.0004578"/>
+    </inertial>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_palm_visuals_rl_dg_palm_Scene_mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_palm_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0. 0. 0." rpy="0. 0. 0."/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/rl_dg_palm_c_node_STL_BINARY__mesh.obj" scale="1. 1. 1."/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="world"/>
+  <!-- Source-backed LeRobot table visual. Spawn pose is world identity; the MoveIt tabletop collision proxy remains separate. -->
+  <joint name="table_visual_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="world"/>
+    <child link="table_visual_link"/>
+  </joint>
+  <link name="table_visual_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://openarm_description/meshes/table/table_visual.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+      <material name="table_visual_gray">
+        <color rgba="0.62 0.64 0.66 1.0"/>
+      </material>
+    </visual>
+  </link>
+  <!-- TODO: grasp-center offset is unknown; keep TCP coincident with rl_dg_palm_extra until measured. -->
+  <joint name="right_tesollo_tcp_joint" type="fixed">
+    <origin xyz="$(arg tesollo_tcp_xyz)" rpy="$(arg tesollo_tcp_rpy)"/>
+    <parent link="rl_dg_palm_extra"/>
+    <child link="right_tesollo_tcp"/>
+  </joint>
+  <link name="right_tesollo_tcp">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
+
+</robot>

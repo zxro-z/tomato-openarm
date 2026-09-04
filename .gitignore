@@ -1,0 +1,22 @@
+# ROS2 / colcon
+build/
+install/
+log/
+
+# Temporary / generated files
+src.zip
+*.gv
+frames_*.pdf
+symlink_install_manifest.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store

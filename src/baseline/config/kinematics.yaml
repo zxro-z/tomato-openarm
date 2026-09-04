@@ -1,0 +1,6 @@
+right_arm:
+  kinematics_solver: pick_ik/PickIkPlugin
+  kinematics_solver_timeout: 2.0
+  mode: global                  # 'local'에서 'global'로 변경하여 전역 탐색 활성화
+  approximate_thresh: 0.005     # 6자유도 자세 도달을 위해 허용 오차를 약간 여유 있게 조정
+  stop_optimization_on_valid_solution: true

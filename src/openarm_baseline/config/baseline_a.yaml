@@ -1,0 +1,95 @@
+# A0 observation settings plus calibration-only virtual grasp/collision data.
+# No physical grasp, perception, or table collision is introduced here.
+head_camera:
+  parent_frame: openarm_body_link0
+  body_frame: head_realsense_link
+  optical_frame: head_realsense_optical_frame
+  # Same calibrated body mount used by legacy_eval_scene.yaml.
+  body_xyz: [0.04, 0.0, 0.597]
+  body_quaternion_xyzw: [0.0, 0.5087081018600654, 0.0, 0.8609390612011568]
+  # ROS optical convention: optical +Z is the viewing/forward ray.
+  optical_frame_rpy: [-1.5707963267948966, 0.0, -1.5707963267948966]
+
+# Existing verified legacy-eval wrist transform, reproduced verbatim.
+wrist_camera:
+  parent_frame: openarm_left_hand_tcp
+  body_frame: wrist_realsense_link
+  optical_frame: wrist_realsense_optical_frame
+  body_xyz: [0.06336, -0.01314, -0.05143]
+  body_quaternion_wxyz: [0.0, 0.5, 0.0, 0.86603]
+  optical_frame_rpy: [-1.5707963267948966, 0.0, -1.5707963267948966]
+
+# Reuse the verified legacy-eval task cube geometry (50 mm edge).
+cube:
+  size_m: 0.05
+  color_rgba: [0.85, 0.05, 0.03, 0.80]
+
+baseline_a:
+  planning_frame: world
+  left_arm_group: left_arm
+  left_tcp_frame: openarm_left_hand_tcp
+  observation_distance_m: 0.25
+  observation_hold_sec: 2.0
+  position_tolerance_m: 0.005
+  orientation_tolerance_rad: 0.035
+  final_position_tolerance_m: 0.010
+  # A0 feasibility proxy only: the TCP origin is placed at the observation
+  # point. A1 must apply the measured T_tcp_object so the OBJECT center, not
+  # TCP, is centered in the image.
+  # The URDF defines TCP at hand local +Z. Finger joints close along hand +Y.
+  # The held-object presentation normal is not yet measured; +Z is the
+  # explicit A0 proxy and must be calibrated before A1.
+  tcp_object_facing_axis: [0.0, 0.0, 1.0]
+  facing_axis_camera_sign: -1.0
+  roll_sweep_deg: [-180, -165, -150, -135, -120, -105, -90, -75, -60, -45, -30, -15, 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180]
+  ik_timeout_sec: 0.25
+  diagnostic_seed_offsets_rad: [0.0, 0.10, -0.10]
+  observation:
+    # Head optical +Z to the cube's selected +Z top-face center.  This is the
+    # initial Baseline-A working-distance parameter, distinct from the legacy
+    # TCP-proxy observation_distance_m and intended for later tuning.
+    camera_frame: head_realsense_optical_frame
+    optimal_distance_m: 0.25
+    # FK at grasp HOME: cube +X has world-Z component +0.995, whereas +Z is
+    # approximately horizontal.  Thus the physical upward/top face is +X.
+    top_face_axis: [1.0, 0.0, 0.0]
+    hold_sec: 2.0
+    # Cube in-plane roll about the camera viewing axis is free. Candidates are
+    # evaluated deterministically and ranked by current joint displacement.
+    roll_candidates_deg: [-180, -165, -150, -135, -120, -105, -90, -75, -60, -45, -30, -15, 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180]
+  grasp:
+    # Sensor-less basic-finger grasp transform, expressed in TCP.  The
+    # contact-grasp node derives this from the active finger collision meshes:
+    # x/y is the midpoint of the opposing inner faces and z places the cube's
+    # forward face at the basic-finger collision tip.
+    tcp_to_cube_xyz: [0.000017954, 0.0, -0.009579736]
+    tcp_to_cube_quat_xyzw: [0.0, 0.0, 0.0, 1.0]
+    cube_size_m: 0.05
+    cube_front_axis: [0.0, 0.0, 1.0]
+    # Calibration-only fake opening. Both prismatic joints are explicitly
+    # commanded so /joint_states and RViz show the symmetric open posture.
+    calibration_open_joint_names: [openarm_left_finger_joint1, openarm_left_finger_joint2]
+    calibration_open_joint_values_m: [0.044, 0.044]
+    calibration_open_tolerance_m: 0.001
+    # Nominal value derived from the sensor-less finger inner-face opening.
+    # The diagnostic recomputes and validates this value from runtime FK.
+    grasp_close_joint_m: 0.026761189
+    collision_object_id: baseline_a_calibration_cube
+    contact_geometry:
+      left_contact_link: openarm_left_left_finger
+      right_contact_link: openarm_left_right_finger
+      left_collision_mesh: meshes/ee/openarm_hand/collision/finger.stl
+      right_collision_mesh: meshes/ee/openarm_hand/collision/finger.stl
+      # Exact <collision><origin> and mesh scale from the active sensor-less
+      # URDF.  The right mesh mirrors its local Y axis.
+      left_collision_origin_xyz: [0.0, -0.05, -0.673001]
+      left_collision_scale_xyz: [0.001, 0.001, 0.001]
+      right_collision_origin_xyz: [0.0, 0.05, -0.673001]
+      right_collision_scale_xyz: [0.001, -0.001, 0.001]
+      close_scan_step_m: 0.001
+      contact_gap_tolerance_m: 0.001
+    # TCP is a fixed child of the hand and is the exact frame of T_tcp_cube.
+    attach_link: openarm_left_hand_tcp
+    touch_links:
+      - openarm_left_left_finger
+      - openarm_left_right_finger

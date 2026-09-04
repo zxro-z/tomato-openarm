@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="right_piper_tomato">
+  <group name="right_arm">
+    <chain base_link="right_base_link" tip_link="right_link6"/>
+  </group>
+  <group name="right_gripper">
+    <joint name="right_joint7"/>
+    <joint name="right_joint8"/>
+  </group>
+
+  <group_state name="home" group="right_arm">
+    <joint name="right_joint1" value="0"/>
+    <joint name="right_joint2" value="0"/>
+    <joint name="right_joint3" value="0"/>
+    <joint name="right_joint4" value="0"/>
+    <joint name="right_joint5" value="0"/>
+    <joint name="right_joint6" value="0"/>
+  </group_state>
+  <group_state name="handover_staging" group="right_arm">
+    <joint name="right_joint1" value="0.55"/>
+    <joint name="right_joint2" value="0.95"/>
+    <joint name="right_joint3" value="-0.85"/>
+    <joint name="right_joint4" value="0"/>
+    <joint name="right_joint5" value="0.35"/>
+    <joint name="right_joint6" value="0"/>
+  </group_state>
+  <group_state name="open" group="right_gripper">
+    <joint name="right_joint7" value="0.035"/>
+    <joint name="right_joint8" value="-0.035"/>
+  </group_state>
+
+  <disable_collisions link1="world" link2="table_link" reason="Adjacent"/>
+  <disable_collisions link1="table_link" link2="piper_body_link" reason="Adjacent"/>
+  <disable_collisions link1="table_link" link2="piper_base_right_link" reason="Adjacent"/>
+  <disable_collisions link1="table_link" link2="right_base_link" reason="Adjacent"/>
+  <disable_collisions link1="piper_base_right_link" link2="right_base_link" reason="Adjacent"/>
+
+  <disable_collisions link1="right_base_link" link2="right_link1" reason="Adjacent"/>
+  <disable_collisions link1="right_base_link" link2="right_link2" reason="Never"/>
+  <disable_collisions link1="right_base_link" link2="right_link3" reason="Never"/>
+  <disable_collisions link1="right_link1" link2="right_link2" reason="Adjacent"/>
+  <disable_collisions link1="right_link1" link2="right_link3" reason="Never"/>
+  <disable_collisions link1="right_link2" link2="right_link3" reason="Adjacent"/>
+  <disable_collisions link1="right_link2" link2="right_link4" reason="Never"/>
+  <disable_collisions link1="right_link3" link2="right_link4" reason="Adjacent"/>
+  <disable_collisions link1="right_link3" link2="right_link5" reason="Never"/>
+  <disable_collisions link1="right_link3" link2="right_link6" reason="Never"/>
+  <disable_collisions link1="right_link3" link2="right_gripper_base" reason="Never"/>
+  <disable_collisions link1="right_link3" link2="right_link7" reason="Never"/>
+  <disable_collisions link1="right_link3" link2="right_link8" reason="Never"/>
+  <disable_collisions link1="right_link4" link2="right_link5" reason="Adjacent"/>
+  <disable_collisions link1="right_link4" link2="right_link6" reason="Never"/>
+  <disable_collisions link1="right_link4" link2="right_gripper_base" reason="Never"/>
+  <disable_collisions link1="right_link4" link2="right_link7" reason="Never"/>
+  <disable_collisions link1="right_link4" link2="right_link8" reason="Never"/>
+  <disable_collisions link1="right_link5" link2="right_link6" reason="Adjacent"/>
+  <disable_collisions link1="right_link5" link2="right_gripper_base" reason="Adjacent"/>
+  <disable_collisions link1="right_link5" link2="right_link7" reason="Never"/>
+  <disable_collisions link1="right_link5" link2="right_link8" reason="Never"/>
+  <disable_collisions link1="right_link6" link2="right_gripper_base" reason="Adjacent"/>
+  <disable_collisions link1="right_link6" link2="right_link7" reason="Adjacent"/>
+  <disable_collisions link1="right_link6" link2="right_link8" reason="Adjacent"/>
+  <disable_collisions link1="right_gripper_base" link2="right_link7" reason="Adjacent"/>
+  <disable_collisions link1="right_gripper_base" link2="right_link8" reason="Adjacent"/>
+  <disable_collisions link1="right_link7" link2="right_link8" reason="Default"/>
+</robot>
